@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+		<a-assets>
+			<a-asset-item id="Owl-obj" src="owl.obj"></a-asset-item>
+			<a-asset-item id="Owl-mtl" src="owl.mtl"></a-asset-item>
+			<img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+		</a-assets>
+		<a-entity obj-model="obj: #Owl-obj; mtl: #Owl-mtl"
+		rotation = "0 180 0"
+		position = " 0 0.5 -2"
+		scale = "0.5 0.5 0.5">
+			<a-animation attribute="rotation" to="0 180 0" direction="alternate" dur="2000"
+				repeat="indefinite"></a-animation>
+			</a-entity>
+		<a-sky color="black"></a-sky>
+		<a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"></a-plane>
+		<a-light type="ambient" color="#445451"></a-light>
+		<a-light type="point" intensity="0.7" position="4 10 4"></a-light>
+	</a-scene>
+  <body>
+</html>
