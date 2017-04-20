@@ -10,13 +10,27 @@
 			<a-asset-item id="Owl-mtl" src="owl.mtl"></a-asset-item>
 			<img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
 		</a-assets>
+		<a-entity>
 		<a-entity obj-model="obj: #Owl-obj; mtl: #Owl-mtl"
 		rotation = "0 180 0"
 		position = " 0 0.5 -2"
 		scale = "0.5 0.5 0.5">
-			<a-animation attribute="rotation" to="0 180 0" direction="alternate" dur="2000"
-				repeat="indefinite"></a-animation>
-			</a-entity>
+		<a-animation attribute="rotation" to="0 180 0" direction="alternate" dur="2000"
+		repeat="indefinite"></a-animation></a-entity>
+		
+		<a-entity camera position="0 0 0">
+		<a-animation attribute="position"
+            dur="2000"
+            easing="linear"
+            to="5 0 -2"></a-animation>
+		</a-entity>
+		
+		</a-entity>
+		<a-camera>
+			<a-cursor></a-cursor>
+		</a-camera>
+		
+		
 		<a-sky color="black"></a-sky>
 		<a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"></a-plane>
 		<a-light type="ambient" color="#445451"></a-light>
